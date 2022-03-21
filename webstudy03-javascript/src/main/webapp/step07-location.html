@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>window의 location</title>
+</head>
+<body>
+<button type="button" onclick="confirmTest()">눌러보세요</button>
+<script type="text/javascript">
+	function confirmTest(){
+		//javascript DOM의 최상위객체 window의 function인 confirm()을 이용해본다
+		//window.confirm()이지만 window는 생략가능
+		let result=confirm("막국수 좋아하세요?"); //확인 누르면 true, 취소 누르면 false가 리턴된다 
+		//alert(result);
+		if(result){
+			alert("우리 여기 놀러가요")
+			location.href="www.naver.com";//해당 경로로 페이지가 이동된다
+		}else{
+			alert("그만봐요")
+		}
+	}
+</script>
+</body>
+</html>
