@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript function</title>
+</head>
+<body>
+javascript function(함수) 테스트 <br><br>
+<!-- onclick=함수() : 버튼을 클릭하면 해당 함수를 실행시킨다 -->
+<input type="button" value="함수테스트버튼1" onclick ="hello()"><br><br>
+
+<!-- 아래 버튼을 누르면 bye()함수가 실행되어 alert창에서 bye 함수 실행이라는 메세지가 나오도록 function 구현 -->
+<input type="button" value="함수테스트버튼2" onclick ="bye()"><br><br>
+
+<!-- 아래 버튼을 클릭하면 정의된 function의 매개변수에 데이터를 전달해본다 -->
+<input type="button" value="함수테스트버튼3" onclick ="testParam('감사',77)"><br><br>
+
+<script type="text/javascript">
+	// javascript function test
+	function hello(){
+		console.log("hello 함수실행"); //F12 개발자 모드의 콘솔에서 메세지를 확인
+		alert("hello 함수실행");
+	}
+	function bye(){
+		alert("bye 함수 실행");
+	}
+	
+	//매개변수를 정의한 function
+	function testParam(info,num){
+		//makeInfo function을 호출해 정보를 리턴받는다
+		let returnValue=makeInfo(info);
+		//window 객체는 생략 가능 (window객채의 alert를 사용하기)
+		window.alert(info+" "+num+" "+returnValue);
+	}
+	
+	//return value을 function에서 이용해본다
+	function makeInfo(info){
+		let message=info+"합니다";
+		return message;
+	}
+	
+</script>
+</body>
+</html>
