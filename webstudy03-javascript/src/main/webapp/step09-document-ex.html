@@ -1,0 +1,35 @@
+<!-- orgTxt id요소에 값을 입력한 후 이동버튼을 누르면 destTxt id요소에 값이 이동, onkeyup, onclick,  -->
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>document 연습문제</title>
+</head>
+<body>
+<form>
+	<!-- onkeyup: 입력방식 orgTxt에서 사용자가 key를 눌렀다가 뗄 때 발생하는 이벤트 -->
+	<input type="text" id="orgTxt" autofocus="autofocus" onkeyup="enterKey()">
+	<button type="button" onclick="moveTxt()">이동</button>
+	<input type="text" id="destTxt">
+	<!-- orgTxt id요소에 값을 입력한 후 이동버튼을 누르면 destTxt id요소에 값이 이동된다 -->
+</form>
+<script type="text/javascript">
+	function moveTxt(){
+		let orgComp=document.getElementById("orgTxt");
+		let destComp=document.getElementById("destTxt");
+		destTxt.value=orgComp.value; //orgTxt의 value를 destaTxt의 value에 할당
+		orgComp.value=""; //orgTxt의 value를 지운다
+		orgComp.focus();//orgTxt에 포커스를 준다
+	}
+	
+	//사용자가 엔터키를 눌렀을 때 동작하는 함수를 정의 : orgTxt의 onkeyup으로 호출된다
+	function enterKey(){
+		//alert("눌렀지?");
+		if(event.keyCode==13){//13번은 엔터키
+			//alert("엔터키를 눌렀습니다")
+			moveTxt();
+		}
+	}
+</script>
+</body>
+</html>
