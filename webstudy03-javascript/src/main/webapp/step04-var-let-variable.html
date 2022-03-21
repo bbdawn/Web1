@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+ES5(ECMA5, 2009) : 변수 선언 var -> 중복 선언 가능 (Function-level scope) <br>
+ES6(ECMA6, 2015) : 변수 선언 추가 let -> 중복 선언 불가 (Block-level scope) <br><br>
+<input type="button" value="test1" onclick="varTest(1)"><br>
+<input type="button" value="test2" onclick="letTest(1)"><br>
+<script type="text/javascript">
+	function varTest(num){
+		if(num>0){
+			var a=1;
+		}//if
+		alert(a); //if문 내에서 선언된 var a 변수 사용 가능,
+				  //if문이 수행되면 해당 값이 출력, if문 출력 안되면 undefined(초기화가 안되었을 경우 출력되는 값)
+				  //var로 선언하면 function level scope임
+	}//varTest
+	function letTest(num){
+		if(num>0){
+			let b=2; //let으로 선언되면 Block Level Scope임. 즉 선언된 자신의 블럭 내에서만 사용 가능
+		}
+		alert(b); //F12 콘솔에서 확인해보면 error : b is not defined
+	}
+</script>
+</body>
+</html>
