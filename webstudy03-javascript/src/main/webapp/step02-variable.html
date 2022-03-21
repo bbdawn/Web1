@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript 변수</title>
+<script type="text/javascript">
+	//ECMA5 변수선언 var을 이용
+	//var은 중복선언이 가능
+	var a=1;
+	var a=2; //중복선언이 가능하다
+	alert(a);
+	
+	//ECMA6 변수선언 let을 이용
+	let b=1;
+	//let b=2; //let은 중복 선언이 불가능함 //F12의 콘솔을 통해 에러 메세지를 확인
+	b=2; //재할당은 가능
+	alert(b)
+	
+	//ECMA6에서 추가된 const를 이용한 상수선언
+	const c=1;
+	//c=2; //F12 콘솔을 통해 확인해보니 에러 : const로 선언되면 상수이므로 재할당 불가함!
+	alert(c);
+</script>
+</head>
+<body>
+javascript 변수 선언 var과 let의 차이를 확인
+</body>
+</html>
