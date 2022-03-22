@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>step3 request post method test</title>
+</head>
+<body>
+<form action="PostTestServlet" method="post">
+<!-- required="required는 공란으로 입력할 수 없게 하는 기능 -->
+<input type="text" name="nickname" placeholder="별명" required="required">
+<input type="text" name="address" placeholder="사는곳" required="required">
+<input type="submit" value="전송">
+</form>
+<!-- 
+	서버에서는 별명:자바왕 사는곳:종로
+ -->
+</body>
+</html>

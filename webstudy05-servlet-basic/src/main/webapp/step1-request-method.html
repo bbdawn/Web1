@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Servlet Basic</title>
+</head>
+<body>
+<!-- 
+	form action : 요청 처리할 서버 url을 명시
+		method : 요청방식, http request method를 지정
+	
+	get방식 요청시 아래와 같이 url이 만들어진다
+	http://localhost:8888/webstudy05-servlet-basic/HelloServlet?message=맛점하세요
+													url-pattern  name    value
+	post방식 요청시 아래와 같이 url이 만들어진다
+	http://localhost:8888/webstudy05-servlet-basic/HelloServlet
+	사용자가 입력한 message 정보는 http request body에 저장되어 전송되므로 노출되지 않는다												
+	
+	
+	
+ -->
+<form action="HelloServlet" method="get">
+<input type="text" name="message" placeholder="메세지"><!-- get방식 요청시에는 url에 메세지가 노출됨!! -->
+<input type="submit" value="get방식요청">
+</form>
+<hr>
+<form action="HelloServlet" method="post">
+<input type="text" name="message" placeholder="메세지"><!-- post방식 요청시에는 url에 메세지가 노출되지 않는다!! -->
+<input type="submit" value="post방식요청">
+</form>
+</body>
+</html>

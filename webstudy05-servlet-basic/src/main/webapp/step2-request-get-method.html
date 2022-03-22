@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>step2 request get method 방섹 테스트</title>
+</head>
+<body>
+<!-- 
+	form에서 별도의 method를 설정하지 않으면 기본이 get방식 요청이 된다 
+	action : 처리할 서버 프로그램의 url을 기술 (url-pattern)
+-->
+<form method="get" action="GetTestServlet">
+<input type="text" name="food" placeholder="점심메뉴" required="required">
+<input type="number" name="count" placeholder="수량" required="required">
+<!-- type="submit"은 서버에 전송하기 위한 목적의 버튼 -->
+<input type="submit" value="전송">
+</form>
+<!-- 
+	아래의 a tag 즉 링크 방식도 get 요청 방식이다
+	url pattern ?     food	=	치킨		&   count = 5
+				구분자  name 		데이터   연결   name 	데이터
+	위와 같은 형식을 "query string"이라고 부른다
+ -->
+ <br><br>
+ <!-- a href는 링크!! -->
+ <a href="GetTestServlet?food=치킨&count=5">주문1</a><br>
+ <a href="GetTestServlet?food=맥주&count=4">주문2</a><br>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
