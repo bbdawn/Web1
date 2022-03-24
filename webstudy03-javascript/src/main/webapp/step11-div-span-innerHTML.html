@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript innerHTML 활용</title>
+<style type="text/css">
+	div{
+		background-color: orange;
+	}
+	span{
+		background-color: yellow;
+	}
+</style>
+</head>
+<body>
+<div id="testDiv">이 부분은 div 입니다</div>
+<span id="testSpan">이 부분은 span 입니다</span>
+<br><br>
+<button type="button" onclick="showInfo()">확인</button>
+<script type="text/javascript">
+	function showInfo() {
+		alert(document.getElementById("testDiv").innerHTML);// innerHTML :  testDiv div tag가 가지고 있는 내부의 html 정보를 반환한다 
+		document.getElementById("testDiv").innerHTML="div innerHTML 정보 변경";
+		alert(document.getElementById("testSpan").innerHTML);		
+		document.getElementById("testSpan").innerHTML="span innerHTML 정보 변경";
+	}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
