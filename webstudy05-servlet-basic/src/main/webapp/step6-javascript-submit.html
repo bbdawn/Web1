@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript로 submit 제어하기</title>
+</head>
+<body>
+<!-- onsubmit 에서 return false 를 명시하면 서버로 전송되지 않는다  -->
+<form action="HelloServlet" method="get" onsubmit="return false">
+<input type="submit" value="전송1">
+</form>
+<hr>
+<!-- onsubmit 에서 return true 를 명시하면 서버로 전송된다  -->
+<form action="HelloServlet" method="get" onsubmit="return true">
+<input type="submit" value="전송2">
+</form>
+<hr>
+<!-- onsubmit 에서 return 을 명시하면 서버로 전송된다  -->
+<form action="HelloServlet" method="get" onsubmit="return ">
+<input type="submit" value="전송3">
+</form>
+<hr>
+<!-- onsubmit 에서 return false 하면 전송되지 않고 그 외에는 전송된다  -->
+<form action="HelloServlet" method="get" onsubmit="return testForm()">
+<input type="number" id="age" name="age" placeholder="나이" required="required">
+<input type="submit" value="전송4">
+</form>
+<script type="text/javascript">
+	function testForm() {
+		let a=document.getElementById("age").value;
+		if(a<=0){
+			alert("잘못된 나이입니다");
+			return false;//false를 리턴하면 전송되지 않는다 
+		}
+	}
+</script>
+</body>
+</html>
+
+
+
+
+
