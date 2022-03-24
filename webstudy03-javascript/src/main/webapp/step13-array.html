@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>javascript array</title>
+</head>
+<body>
+<button type="button" onclick="testArray1()">배열테스트1</button>
+<button type="button" onclick="testArray2()">배열테스트2</button>
+<button type="button" onclick="testArray3()">배열테스트3</button>
+<form>
+	<input type="checkbox" name="food" value="피자">피자 <br>
+	<input type="checkbox" name="food" value="맥주">맥주 <br>
+	<input type="checkbox" name="food" value="치킨">치킨 <br>
+</form>
+<script type="text/javascript">
+	function testArray1() {
+		let arr=new Array(3);// javascript 배열 
+		arr[0]="돌멩이";
+		arr[1]="문득";
+		arr[2]="유자차";
+		for(let i=0;i<arr.length;i++){
+			alert(arr[i]);
+		}
+	}
+	function testArray2() {
+		let nameArray=["마시따밴드","도운","브로콜리너마저","가을방학"];//javascript 배열 
+		for(let i=0;i<nameArray.length;i++){
+			alert(nameArray[i]);
+		}
+	}
+	function testArray3() {
+		let foodArray=document.getElementsByName("food");// food checkbox 3개가 배열로 반환된다 
+		alert(foodArray.length);
+		for(let i=0;i<foodArray.length;i++){
+			alert(foodArray[i].value);
+		}
+	}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
