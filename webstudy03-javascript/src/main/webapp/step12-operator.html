@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JavaScript Operator</title>
+</head>
+<body>
+<button type="button" onclick="testOperator()">확인</button>
+<script type="text/javascript">
+	function testOperator() {
+		let name1="월요일";
+		let name2="월요일 ";
+		console.log(name1.length);
+		console.log(name2.length);
+		console.log(name1==name2);
+		console.log(name1==name2.trim()); //true : trim()으로 여백 제거했기때문
+		let age1=21;//정수형
+		let age2="21"; //문자열
+		console.log(age1==age2); //== 강제형변환 (숫자로 변환하여 비교) true
+		console.log(age1===age2); //=== 타입까지 체크. 엄격한 비교 false
+		console.log(age1+age2); //age2가 문자열이므로 2121이 출력됨
+		let age3=parseInt(age2); //정수형으로 변환                   //parseInt() -> 정수형으로 변환
+		console.log(age1+age3);//정수형끼리 변환했으니까 42 출력됨
+	}
+</script>
+</body>
+</html>
