@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>step15-checkbox-ex</title>
+</head>
+<body>
+<form>
+<!-- 
+		사용자가 저녁메뉴를 하나도 체크하지 않고 주문버튼을 눌렀을 경우에는 
+		alert 메뉴를 하나 이상 선택하세요! 
+		
+		하나 이상 메뉴를 선택했을 경우에는 
+		저녁메뉴를 주문하였습니다!
+		
+		name="dinner"로 여러개의 체크박스가 명시되어있으므로 document.getElementsByName(name)을 이용해야함
+ -->
+	<input type="checkbox" name="dinner" value="삼겹살">삼겹살 <br>
+	<input type="checkbox" name="dinner" value="족발">족발 <br>
+	<input type="checkbox" name="dinner" value="소주">소주 <br>
+	<button type="button" onclick="order()">주문</button>
+</form>
+<script type="text/javascript">
+	function order(){
+		let flag=false;
+		let dinnerComp=document.getElementsByName("dinner");
+		//alert(dinnerComp.length);
+		for(let i=0; i<dinnerComp.length; i++){
+			if(dinnerComp[i].checked){
+				flag=true;
+				break;//for문을 종료
+			}
+		}
+		
+		if(flag){
+			alert("저녁메뉴를 주문하였습니다");
+		}else{
+			alert("메뉴 하나 이상을 선택하세요")
+		}
+	}
+
+</script>
+</body>
+</html>
