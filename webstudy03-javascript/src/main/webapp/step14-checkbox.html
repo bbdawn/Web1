@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>step14-checkbox</title>
+</head>
+<body>
+<form>
+	<input type="checkbox" id="confirmChk" value="agree"><br>
+	<button type="button" onclick="testCheckBox()">확인</button>
+	<button type="button" onclick="testCheckBox2()">체크하기</button>
+	<button type="button" onclick="testCheckBox3()">체크해제하기</button>
+</form>
+<script type="text/javascript">
+	function testCheckBox(){
+		let chkComp=document.getElementById("confirmChk");
+		console.log(chkComp.value); //value를 가져온다
+		console.log(chkComp.checked); //사용자가 체크박스에 체크한 여부를 true와 false로 가져온다
+	}
+	function testCheckBox2(){
+		document.getElementById("confirmChk").checked=true;
+	} //체크하기 기능
+	function testCheckBox3(){
+		//javascript의 value, innerHTML, checked와 같은 속성은 set과 get이 된다!!!!
+		document.getElementById("confirmChk").checked=false;
+	} //체크 해제하기 기능
+</script>
+</body>
+</html>
