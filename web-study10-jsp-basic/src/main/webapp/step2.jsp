@@ -9,10 +9,10 @@
 <body>
 <%!
 		public void jspInit(){
-			System.out.println("jspInit()");
+			System.out.println("jsp Init()");
 		}
 		public void jspDestroy(){
-			System.out.println("jspDestroy()");
+			System.out.println("jsp Destroy()");
 		}
 %>
 <%
