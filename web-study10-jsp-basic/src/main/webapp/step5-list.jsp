@@ -12,7 +12,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>상품 list를 jsp로 표현</title>
+<title>상품 list를 jsp로 표현해보기</title>
 <link rel="stylesheet" type="text/css" href="css/home.css">
 </head>
 <body>
