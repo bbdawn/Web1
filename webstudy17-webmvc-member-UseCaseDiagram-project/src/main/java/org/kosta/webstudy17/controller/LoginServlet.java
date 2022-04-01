@@ -28,6 +28,7 @@ public class LoginServlet extends HttpServlet {
 				response.sendRedirect("login-fail.jsp");
 			}else {
 				HttpSession session=request.getSession();
+				//세션에 인증된 회원번호를 할당한다
 				session.setAttribute("mvo", vo);
 				response.sendRedirect("index.jsp");
 			}
