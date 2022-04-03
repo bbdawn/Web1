@@ -21,7 +21,7 @@ UseCase Diagram
 업무별 구현 순서 
 아이디로 회원검색 -> 로그인, 로그아웃 -> 주소로 회원검색 -> 회원정보수정 -> 회원가입 및 아이디 중복확인 
 
-1. 아이디로 회원검색 
+#1. 아이디로 회원검색 
 
 index.jsp  --- FindMemberByIdServlet --- MemberDAO ------ DB 
 						|
@@ -33,7 +33,7 @@ index.jsp  --- FindMemberByIdServlet --- MemberDAO ------ DB
 
 
 
-2. 로그인, 로그아웃
+#2. 로그인, 로그아웃
 1) 로그인
 	
 	index.jsp --- LoginServlet  ---  MemberDAO ----------------------  DB
@@ -74,7 +74,7 @@ Http Response status code(응답상태코드)
 500 - 서버오류 (Exception, 콘솔 메세지를 확인해서 코드 수정)							
 					
 
-3. 주소로 회원검색
+#3. 주소로 회원검색
 	index.jsp   ------- FindMemberListByAddressServlet --- MemberDAO ------------------------------------------  DB
 	주소 입력받아 전송 				|
 								|						findMemberListByAddress(address):ArrayList<MemberVO>
@@ -94,7 +94,7 @@ Http Response status code(응답상태코드)
 
 
 
-4. 회원정보수정
+#4. 회원정보수정
 
 	index.jsp   --- update-form.jsp  ----------------------UpdatdMemberServlet ------ MemberDAO ------------------ Database
 					아이디를 제외한														    updateMember(MemberVO)
@@ -139,7 +139,7 @@ Http Response status code(응답상태코드)
 
 
 
-5. 회원가입
+#5. 회원가입
 
 	index.jsp   --- register-form.jsp ------RegisterMemberServlet --- MemberDAO   ---------- Database
 					회원가입폼을 제공										register(MemberVO)
@@ -148,7 +148,7 @@ Http Response status code(응답상태코드)
 												register-result.jsp
 
 
-6. 아이디 중복확인
+#6. 아이디 중복확인
 
 별도의 프로젝트 webstudy18에서 html의 hidden과 javascript popup을 단위테스트(연습)
 
